@@ -44,13 +44,13 @@ This mini project is a responsive portofolio/company profile website built with 
 
 ## 📸 Preview
 
-<img width="1366" height="768" alt="Preview Application" src="" />
+<img width="1366" height="768" alt="Preview Application" src="https://github.com/Revou-Coding-Camp/codingcamp-11-aug-25-GeNdarrr/blob/main/Portofolio.png?raw=true" />
 
 ---
 
 ## 🌐 Demo
 
-🔗 [Portofolio/Company Profile Page]()
+🔗 [Portofolio/Company Profile Page](https://revou-coding-camp.github.io/codingcamp-11-aug-25-GeNdarrr/)
 
 ---
 
