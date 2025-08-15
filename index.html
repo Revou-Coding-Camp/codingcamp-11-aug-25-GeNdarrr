@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="navbar">
+      <div class="logo">😊</div>
+      <nav id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#profile" class="nav-link">Our Profile</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#message" class="nav-link">Message Us</a>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="material-icons">menu</span>
+      </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 id="greeting">Hi, Welcome to Website</h1>
+        <p>Ini adalah website latihan pertama</p>
+      </div>
+    </section>
+
+    <!-- Our Profile -->
+    <section id="profile" class="section">
+      <h2>Our Headquarter</h2>
+      <div class="hq-container">
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Jakarta</p>
+        </div>
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Bandung</p>
+        </div>
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Surabaya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section">
+      <h2>Portfolio</h2>
+      <p>
+        Halo, saya [Nama Anda]! Saya adalah seorang pemula di dunia web
+        development yang sedang belajar membangun website dari nol. Saat ini
+        saya fokus mempelajari HTML, CSS, dan JavaScript untuk membuat tampilan
+        web yang menarik, responsif, dan mudah digunakan. Di portofolio ini,
+        saya membagikan beberapa proyek latihan yang telah saya buat, mulai dari
+        halaman statis sederhana hingga website interaktif dasar. Setiap proyek
+        menjadi langkah kecil dalam perjalanan saya untuk memahami bagaimana
+        sebuah website bekerja dari tampilan hingga fungsionalitasnya. Tujuan
+        saya adalah terus mengasah keterampilan, mencoba teknologi baru, dan
+        pada akhirnya mampu membuat website yang bermanfaat dan profesional
+      </p>
+    </section>
+
+    <!-- Message Us -->
+    <section id="message" class="section">
+      <h2>Message Us</h2>
+      <div class="form-container">
+        <form id="messageForm">
+          <label>Nama:</label>
+          <input type="text" id="nama" required />
+          <label>Tanggal Lahir:</label>
+          <input type="date" id="tanggal" required />
+          <label>Jenis Kelamin:</label>
+          <div>
+            <input type="radio" name="gender" value="Laki-Laki" required />
+            Laki-Laki
+            <input type="radio" name="gender" value="Perempuan" required />
+            Perempuan
+          </div>
+          <label>Pesan:</label>
+          <textarea id="pesan" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="formResult"></div>
+      </div>
+    </section>
+
+    <footer>Created By RavaU</footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
