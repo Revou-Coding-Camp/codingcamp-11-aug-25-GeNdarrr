@@ -32,7 +32,7 @@ header.solid {
 }
 
 .logo {
-    font-size: 2rem;
+    width: 2rem;
 }
 
 nav {
@@ -54,6 +54,33 @@ nav {
 .menu-toggle {
     display: none;
     cursor: pointer;
+    font-size: 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgb(199, 199, 199);
+        width: 200px;
+        padding: 10px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
 }
 
 .hero {
@@ -103,28 +130,182 @@ form {
     padding: 10px;
 }
 
-/* Responsive */
+/* Our Profile */
+.hq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hq-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hq-icon {
+    font-size: 40px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+/* Portfolio */
+.portfolio-section {
+    background: #b2b2b2;
+    padding: 60px 30px;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.portfolio-text {
+    flex: 1 0 300px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+.portfolio-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 768px) {
-    nav {
-        display: none;
+    .portfolio-content {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgb(199, 199, 199);
-        width: 200px;
-        padding: 10px;
+        align-items: center;
     }
 
-    nav.show {
-        display: flex;
+    .portfolio-text {
+        text-align: center;
     }
+}
 
-    .menu-toggle {
-        display: block;
-    }
+/* Message Us */
+.form-container {
+    background: #fdfbff;
+    border: 2px solid rgb(199, 199, 199);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.gender-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.message-form button {
+    background-color: rgb(199, 199, 199);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+    background-color: #b2b2b2;
+}
+
+.form-result {
+    color: white;
+    margin-top: 20px;
+    background: #b2b2b2;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #aaa;
+}
+
+/* 📱 Media Query untuk layar kecil */
+@media (max-width: 600px) {
     .form-container {
-        flex-direction: column;
+        padding: 15px;
     }
+
+    .gender-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message-form button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.site-footer {
+    background: rgb(199, 199, 199);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-content p,
+.footer-content small {
+    margin: 0;
+    font-size: 14px;
 }

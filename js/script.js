@@ -6,6 +6,8 @@ window.onload = function() {
     }
 };
 
+// Navbar toggle untuk mobile
+
 // Navbar scroll change color & active link
 const navbar = document.getElementById("navbar");
 const sections = document.querySelectorAll("section");
@@ -53,18 +55,45 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
 
-// Form validation & show result
-document.getElementById("messageForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    let nama = document.getElementById("nama").value;
-    let tanggal = document.getElementById("tanggal").value;
-    let gender = document.querySelector('input[name="gender"]:checked').value;
-    let pesan = document.getElementById("pesan").value;
+document.getElementById("messageForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    document.getElementById("formResult").innerHTML = `
-        <p><strong>Nama:</strong> ${nama}</p>
-        <p><strong>Tanggal Lahir:</strong> ${tanggal}</p>
-        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
-        <p><strong>Pesan:</strong> ${pesan}</p>
-    `;
+  const nama = document.getElementById("nama").value.trim();
+  const tanggal = document.getElementById("tanggal").value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const pesan = document.getElementById("pesan").value.trim();
+  const result = document.getElementById("formResult");
+
+  if (!pesan) {
+    alert("Pesan tidak boleh kosong!");
+    return;
+  }
+
+  // Ambil waktu sekarang
+  const now = new Date();
+  const timeString = now.toLocaleTimeString('id-ID', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  const dateString = now.toLocaleDateString('id-ID');
+  const waktuKirim = `${dateString} ${timeString} WIB`;
+
+  // Tampilkan hasil
+  const output = `
+    <h3>Terima Kasih 🎉</h3>
+    <p><strong>Nama:</strong> ${nama}</p>
+    <p><strong>Tanggal Lahir:</strong> ${tanggal}</p>
+    <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+    <p><strong>Pesan:</strong> ${pesan}</p>
+    <p><strong>Waktu Kirim:</strong> ${waktuKirim}</p>
+  `;
+  result.innerHTML = output;
+
+  // Simpan ke localStorage
+  const data = { nama, tanggal, gender, pesan, waktuKirim };
+  localStorage.setItem("formMessage", JSON.stringify(data));
+
+  // Reset form
+  document.getElementById("messageForm").reset();
 });

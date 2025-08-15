@@ -13,10 +13,15 @@
   <body>
     <!-- Navbar -->
     <header id="navbar">
-      <div class="logo">😊</div>
+      <div class="logo">
+        <img
+          src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/lookback.svg"
+          alt=""
+        />
+      </div>
       <nav id="nav-menu">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#profile" class="nav-link">Our Profile</a>
+        <a href="#skill" class="nav-link">Skill</a>
         <a href="#portfolio" class="nav-link">Portfolio</a>
         <a href="#message" class="nav-link">Message Us</a>
       </nav>
@@ -28,72 +33,134 @@
     <!-- Home -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <h1 id="greeting">Hi, Welcome to Website</h1>
-        <p>Ini adalah website latihan pertama</p>
+        <h1 id="greeting">Hi, Welcome to My Website</h1>
+        <p>This my first portofolio website</p>
       </div>
     </section>
 
-    <!-- Our Profile -->
-    <section id="profile" class="section">
-      <h2>Our Headquarter</h2>
+    <!-- Skill -->
+    <section id="skill" class="section">
+      <h2>Skill</h2>
       <div class="hq-container">
-        <div class="hq-item">
-          <div class="circle"></div>
-          <p>Jakarta</p>
+        <div class="hq-card">
+          <img
+            style="width: 100px; height: 100px"
+            src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg"
+            alt=""
+          />
+          <p>
+            This is the standard markup language for creating web pages. It
+            provides the structure and content of a website, defining elements
+            like headings, paragraphs, lists, links, images, and more.
+          </p>
         </div>
-        <div class="hq-item">
-          <div class="circle"></div>
-          <p>Bandung</p>
+        <div class="hq-card">
+          <img
+            style="width: 100px; height: 100px"
+            src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/css-3.svg"
+            alt=""
+          />
+          <p>
+            This language is used to control the visual presentation and layout
+            of web pages. It dictates aspects such as colors, fonts, spacing,
+            positioning of elements, and responsiveness for different screen
+            sizes.
+          </p>
         </div>
-        <div class="hq-item">
-          <div class="circle"></div>
-          <p>Surabaya</p>
+        <div class="hq-card">
+          <img
+            style="width: 100px; height: 100px"
+            src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/javascript.svg"
+            alt=""
+          />
+          <p>
+            JavaScript adds interactivity and dynamic behavior to web pages. It
+            allows for features like animations, form validation, real-time
+            updates, and user interaction handling.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <p>
-        Halo, saya [Nama Anda]! Saya adalah seorang pemula di dunia web
-        development yang sedang belajar membangun website dari nol. Saat ini
-        saya fokus mempelajari HTML, CSS, dan JavaScript untuk membuat tampilan
-        web yang menarik, responsif, dan mudah digunakan. Di portofolio ini,
-        saya membagikan beberapa proyek latihan yang telah saya buat, mulai dari
-        halaman statis sederhana hingga website interaktif dasar. Setiap proyek
-        menjadi langkah kecil dalam perjalanan saya untuk memahami bagaimana
-        sebuah website bekerja dari tampilan hingga fungsionalitasnya. Tujuan
-        saya adalah terus mengasah keterampilan, mencoba teknologi baru, dan
-        pada akhirnya mampu membuat website yang bermanfaat dan profesional
-      </p>
+    <section id="portfolio" class="section portfolio-section">
+      <h2 style="padding-bottom: 25px">Portfolio</h2>
+      <div class="portfolio-content">
+        <div class="portfolio-text">
+          <p>
+            I’m a beginner in web development, currently learning to build
+            websites from scratch. I’m focusing on HTML, CSS, and JavaScript to
+            create web pages that are visually appealing, responsive, and
+            user-friendly. In this portfolio, I showcase some practice projects
+          </p>
+          <p>
+            I’ve built, ranging from simple static pages to basic interactive
+            websites. Each project is a step forward in understanding how
+            websites work—from design to functionality. My goal is to keep
+            improving my skills, explore new technologies, and eventually create
+            websites that are both useful and professional.
+          </p>
+          <p>
+            I’m excited to share my journey and look forward to connecting with
+            others in the web development community!
+          </p>
+        </div>
+        <div class="portfolio-image">
+          <img src="https://picsum.photos/500/350" alt="Portfolio Preview" />
+        </div>
+      </div>
     </section>
 
     <!-- Message Us -->
     <section id="message" class="section">
       <h2>Message Us</h2>
       <div class="form-container">
-        <form id="messageForm">
-          <label>Nama:</label>
-          <input type="text" id="nama" required />
-          <label>Tanggal Lahir:</label>
+        <form id="messageForm" class="message-form">
+          <label for="nama">Nama:</label>
+          <input
+            type="text"
+            id="nama"
+            placeholder="Masukkan nama Anda"
+            required
+          />
+
+          <label for="tanggal">Tanggal Lahir:</label>
           <input type="date" id="tanggal" required />
+
           <label>Jenis Kelamin:</label>
-          <div>
-            <input type="radio" name="gender" value="Laki-Laki" required />
-            Laki-Laki
-            <input type="radio" name="gender" value="Perempuan" required />
-            Perempuan
+          <div class="gender-group">
+            <label
+              ><input type="radio" name="gender" value="Laki-Laki" required />
+              Laki-Laki</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Perempuan" required />
+              Perempuan</label
+            >
           </div>
-          <label>Pesan:</label>
-          <textarea id="pesan" required></textarea>
-          <button type="submit">Submit</button>
+
+          <label for="pesan">Pesan:</label>
+          <textarea
+            id="pesan"
+            placeholder="Tulis pesan Anda..."
+            required
+          ></textarea>
+
+          <button type="submit">Kirim</button>
         </form>
-        <div id="formResult"></div>
+
+        <div id="formResult" class="form-result">
+          <p><em>Pesan Anda akan muncul di sini setelah dikirim.</em></p>
+        </div>
       </div>
     </section>
 
-    <footer>Created By RavaU</footer>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>Created with ❤️ by <strong>GeNdarr</strong></p>
+        <small>&copy; 2025 All rights reserved.</small>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
